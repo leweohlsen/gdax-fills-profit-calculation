@@ -13,7 +13,7 @@ def sell(sell_size, sell_price, orders):
     
     # Last BUY is bigger than SELL. Keep and edit the position.
     if last['size'] > sell_size:
-        loss += last['size'] * last['price']
+        loss += sell_size * last['price']
         win += sell_size * sell_price
         # Edit the position.
         last['size'] -= sell_size
